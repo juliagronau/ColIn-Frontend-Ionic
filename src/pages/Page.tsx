@@ -1,7 +1,11 @@
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonRouterOutlet, IonTitle, IonToolbar } from '@ionic/react';
 import { useParams } from 'react-router';
-import ExploreContainer from '../components/ExploreContainer';
+// import { Route } from 'workbox-routing';
+import Home from '../components/Home';
 import './Page.css';
+import {Route} from 'react-router-dom';
+import Theme from '../components/Theme/Theme';
+import ColorCombo from '../components/ColorCombo/ColorCombo';
 
 const Page: React.FC = () => {
 
@@ -24,7 +28,17 @@ const Page: React.FC = () => {
             <IonTitle size="large">{name}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name={name} />
+        <IonRouterOutlet>
+          <Route path="/page/Home" exact={true}>
+            <Home />
+          </Route>
+          <Route path="/page/ColorCombo" exact={true}>
+            <ColorCombo />
+          </Route>
+          <Route path="/page/Themes" exact={true}>
+            <Theme />
+          </Route>
+        </IonRouterOutlet>
       </IonContent>
     </IonPage>
   );

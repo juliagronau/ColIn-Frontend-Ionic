@@ -1,6 +1,7 @@
-import { IonContent, IonImg } from "@ionic/react";
+import { IonCol, IonGrid, IonSpinner, IonRow, IonImg } from "@ionic/react";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import "../ExploreContainer.css";
 
 const ColorComboResult = props => {
   const [combo, setCombo] = useState();
@@ -10,20 +11,35 @@ const ColorComboResult = props => {
     axios
       .get(url)
       .then(res => {
-        console.log(res.data.image.named);
-        setCombo(res.data.image.named);
+        console.log(res.data.colors);
+        setCombo(res.data.colors);
       })
       .catch(err => console.log(err));
-  }, []);
+  }, [url]);
 
-  //   Find a way to display SVG
-  return combo ? (
-    <IonContent>
-      <IonImg src={combo} />
-    </IonContent>
-  ) : (
-    "Loading..."
+  return (
+    <IonGrid>
+      <IonRow>
+        {combo ? (
+          combo.map(color => (
+            <IonCol key={color.hex.clean}>
+              <IonImg
+                className="color-combo-result"
+                src={color.image.bare}
+              ></IonImg>
+              {color.name.value} {color.hex.value}
+            </IonCol>
+          ))
+        ) : (
+          <IonSpinner name="bubbles" color="tertiary" />
+        )}
+      </IonRow>
+      <IonRow>
+        Please note: There are many unnamed colors. The names displayed here
+        correspond to the closest color that has a name if the displayed color
+        doesn't have one.
+      </IonRow>
+    </IonGrid>
   );
 };
-
 export default ColorComboResult;

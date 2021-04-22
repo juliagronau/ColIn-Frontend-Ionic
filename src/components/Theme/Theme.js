@@ -6,7 +6,7 @@ const Theme = () => {
     <IonContent>
       <div className="container">
         <img
-          src="https://images.unsplash.com/photo-1566666801184-2df912252e44?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1504&q=80"
+          src="https://cdn.discordapp.com/attachments/828377005312573490/834507261967335454/Unbenanntes_Projekt.jpg"
           alt="placeholder"
         />
         <h1>Choose from one of my themes</h1>

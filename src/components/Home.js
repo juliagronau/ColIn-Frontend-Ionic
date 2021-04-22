@@ -6,7 +6,7 @@ const Home = () => {
     <IonContent>
       <div className="container">
         <img
-          src="https://images.unsplash.com/photo-1471666875520-c75081f42081?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1676&q=80"
+          src="https://cdn.discordapp.com/attachments/828377005312573490/834680623276490773/Unbenanntes_Projekt.jpg"
           alt="placeholder"
         />
         <h1>ColIn - the color inspirator for your creative projects</h1>

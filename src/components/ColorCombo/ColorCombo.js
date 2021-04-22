@@ -35,7 +35,7 @@ const ColorCombo = () => {
     <IonContent>
       <div className="container">
         <img
-          src="https://images.unsplash.com/photo-1612900870552-0312616bac06?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
+          src="https://cdn.discordapp.com/attachments/828377005312573490/834505309316972574/Unbenanntes_Projekt.jpg"
           alt="placeholder"
         />
         <h1>Get your personalized Color Combination</h1>

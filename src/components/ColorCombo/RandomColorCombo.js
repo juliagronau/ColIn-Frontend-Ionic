@@ -1,7 +1,7 @@
 import "../ExploreContainer.css";
 import RandomColorComboResult from "./RandomColorComboResult";
 import { useState, useEffect } from "react";
-import { IonSpinner } from "@ionic/react";
+import { IonContent, IonSpinner } from "@ionic/react";
 
 const RandomColorCombo = () => {
   const [randomBaseColor, setRandomBaseColor] = useState();
@@ -13,26 +13,32 @@ const RandomColorCombo = () => {
     "monochrome-light",
     "analogic",
   ];
+  let randomColor = baseColor[Math.floor(Math.random() * baseColor.length)];
+  let randomColorMode = mode[Math.floor(Math.random() * mode.length)];
 
-  const getRandomColor = arr => {
-    const randomIndex = Math.floor(Math.random() * arr.length);
-    const random = arr[randomIndex];
-    setRandomBaseColor(random);
-  };
+  useEffect(() => {
+    setRandomBaseColor(randomColor);
+    setRandomMode(randomColorMode);
+  }, []);
 
-  const getRandomMode = arr => {
-    const randomIndex = Math.floor(Math.random() * arr.length);
-    const random = arr[randomIndex];
-    setRandomMode(random);
-  };
-
-  return randomBaseColor && randomMode ? (
-    <RandomColorComboResult
-      randomBaseColor={randomBaseColor}
-      randomMode={randomMode}
-    />
-  ) : (
-    <IonSpinner name="bubbles" color="tertiary" />
+  return (
+    <IonContent>
+      <div className="container">
+        <img
+          src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Pinsel.jpg"
+          alt="placeholder"
+        />
+        <h1>Here's your random ColorCombo</h1>
+        {randomBaseColor && randomMode ? (
+          <RandomColorComboResult
+            randomBaseColor={randomBaseColor}
+            randomMode={randomMode}
+          />
+        ) : (
+          <IonSpinner name="bubbles" color="tertiary" />
+        )}
+      </div>
+    </IonContent>
   );
 };
 

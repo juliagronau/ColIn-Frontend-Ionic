@@ -15,10 +15,20 @@ const Theme = () => {
   return (
     <IonContent>
       <div className="container" style={{ paddingBottom: "2rem" }}>
-        <img
-          src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_kleineKleckse.jpg"
-          alt="placeholder"
-        />
+        <picture>
+          <source
+            srcset="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_kleineKlecke_Dark.jpg"
+            media="(prefers-color-scheme: dark)"
+          ></source>
+          <source
+            srcset="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_kleineKleckse.jpg"
+            media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          ></source>
+          <img
+            src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_kleineKleckse.jpg"
+            alt="placeholder"
+          />
+        </picture>
         <h1>Choose from one of my themes</h1>
         <IonButton
           shape="round"

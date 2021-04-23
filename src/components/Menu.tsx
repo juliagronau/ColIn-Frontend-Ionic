@@ -53,7 +53,13 @@ const Menu: React.FC = () => {
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
-          <IonListHeader><IonImg src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Logo3.jpg" ></IonImg></IonListHeader>
+          <IonListHeader>
+            <picture>
+              <source srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Logo3_Dark.jpg" media="(prefers-color-scheme: dark)"></source>
+              <source srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Logo3.jpg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"></source>
+              <IonImg src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Logo3.jpg" ></IonImg>
+            </picture>
+            </IonListHeader>
           <IonNote>ColIn - Your Color Inspirator</IonNote>
           {appPages.map((appPage, index) => {
             return (

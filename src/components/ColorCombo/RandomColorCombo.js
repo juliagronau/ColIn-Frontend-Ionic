@@ -24,10 +24,20 @@ const RandomColorCombo = () => {
   return (
     <IonContent>
       <div className="container">
-        <img
-          src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Pinsel.jpg"
-          alt="placeholder"
-        />
+        <picture>
+          <source
+            srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Pinsel_Dark.jpg"
+            media="(prefers-color-scheme: dark)"
+          ></source>
+          <source
+            srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Pinsel.jpg"
+            media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          ></source>
+          <img
+            src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Pinsel.jpg"
+            alt="placeholder"
+          />
+        </picture>
         <h1>Here's your random ColorCombo</h1>
         {randomBaseColor && randomMode ? (
           <RandomColorComboResult

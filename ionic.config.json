@@ -1,5 +1,7 @@
 {
   "name": "colin-frontend-ionic",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "react"
 }

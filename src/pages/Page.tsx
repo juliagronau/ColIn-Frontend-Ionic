@@ -6,6 +6,7 @@ import './Page.css';
 import {Route} from 'react-router-dom';
 import Theme from '../components/Theme/Theme';
 import ColorCombo from '../components/ColorCombo/ColorCombo';
+import RandomColorCombo from '../components/ColorCombo/RandomColorCombo';
 
 const Page: React.FC = () => {
 
@@ -37,6 +38,9 @@ const Page: React.FC = () => {
           </Route>
           <Route path="/page/Themes" exact={true}>
             <Theme />
+          </Route>
+          <Route path="/page/Random" exact={true}>
+            <RandomColorCombo />
           </Route>
         </IonRouterOutlet>
       </IonContent>

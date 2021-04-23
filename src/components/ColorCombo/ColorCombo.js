@@ -35,13 +35,13 @@ const ColorCombo = () => {
     <IonContent>
       <div className="container">
         <img
-          src="https://cdn.discordapp.com/attachments/828377005312573490/834505309316972574/Unbenanntes_Projekt.jpg"
+          src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Pinsel.jpg"
           alt="placeholder"
         />
         <h1>Get your personalized Color Combination</h1>
         <form onSubmit={onSubmit}>
           <IonList>
-            <IonListHeader>
+            <IonListHeader style={{ marginBottom: "1rem" }}>
               <IonLabel>Tell me about your preferences</IonLabel>
             </IonListHeader>
 
@@ -107,7 +107,11 @@ const ColorCombo = () => {
               </IonSelect>
             </IonItem>
           </IonList>
-          <IonButton type="submit" onClick={onClick}>
+          <IonButton
+            type="submit"
+            onClick={onClick}
+            style={{ marginTop: "2rem", marginBottom: "2rem" }}
+          >
             Get your Color Combo
           </IonButton>
         </form>

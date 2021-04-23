@@ -1,5 +1,6 @@
 import {
   IonContent,
+  IonImg,
   IonItem,
   IonLabel,
   IonList,
@@ -52,8 +53,8 @@ const Menu: React.FC = () => {
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
-          <IonListHeader>ColIn</IonListHeader>
-          <IonNote>Your Color Inspirator</IonNote>
+          <IonListHeader><IonImg src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Logo3.jpg" ></IonImg></IonListHeader>
+          <IonNote>ColIn - Your Color Inspirator</IonNote>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>

@@ -27,14 +27,16 @@ const ColorComboResult = props => {
                 className="color-combo-result"
                 src={color.image.bare}
               ></IonImg>
-              {color.name.value} {color.hex.value}
+              {color.name.value}
+              <br></br>
+              {color.hex.value}
             </IonCol>
           ))
         ) : (
           <IonSpinner name="bubbles" color="tertiary" />
         )}
       </IonRow>
-      <IonRow>
+      <IonRow style={{ marginTop: "2rem" }}>
         Please note: There are many unnamed colors. The names displayed here
         correspond to the closest color that has a name if the displayed color
         doesn't have one.

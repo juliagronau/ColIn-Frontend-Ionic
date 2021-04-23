@@ -5,7 +5,7 @@ import "../ExploreContainer.css";
 
 const ColorComboResult = props => {
   const [combo, setCombo] = useState();
-  const url = `http://www.thecolorapi.com/scheme?hex=${props.baseColor}&mode=${props.mode}&count=${props.numberOfColors}`;
+  const url = `https://www.thecolorapi.com/scheme?hex=${props.baseColor}&mode=${props.mode}&count=${props.numberOfColors}`;
 
   useEffect(() => {
     axios

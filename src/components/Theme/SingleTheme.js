@@ -4,7 +4,6 @@ import { IonCol, IonGrid, IonSpinner, IonRow, IonIcon } from "@ionic/react";
 import "../ExploreContainer.css";
 
 const SingleTheme = props => {
-  console.log(props);
   const [theme, setTheme] = useState();
   const [themeColors, setThemeColors] = useState();
   const url = `https://colin-color-inspirator.herokuapp.com/themes/${props.themeID}`;
@@ -13,7 +12,6 @@ const SingleTheme = props => {
     axios
       .get(url)
       .then(res => {
-        console.log(res.data);
         setThemeColors(res.data.colors);
         setTheme(res.data);
       })

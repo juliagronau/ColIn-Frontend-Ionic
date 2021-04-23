@@ -11,7 +11,6 @@ const ColorComboResult = props => {
     axios
       .get(url)
       .then(res => {
-        console.log(res.data.colors);
         setCombo(res.data.colors);
       })
       .catch(err => console.log(err));

@@ -4,7 +4,7 @@ import "./ExploreContainer.css";
 const Home = () => {
   return (
     <IonContent>
-      <div className="container">
+      <div className="container" style={{ paddingBottom: "2rem" }}>
         <img
           src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_mitLogo.jpg"
           alt="placeholder"

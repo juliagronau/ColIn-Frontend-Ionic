@@ -8,16 +8,16 @@ const About = () => {
       <div className="container" style={{ padding: "2rem" }}>
         <picture>
           <source
-            srcset="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Blumen_Dark.jpg"
+            srcset="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Julia_Dark.jpg"
             media="(prefers-color-scheme: dark)"
           ></source>
           <source
-            srcset="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Blumen.jpg"
+            srcset="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Julia.jpg"
             media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
           ></source>
           <img
-            src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Blumen.jpg"
-            alt="placeholder"
+            src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Julia.jpg"
+            alt="Hi I'm Julia"
           />
         </picture>
         <h1>Hi, I'm Julia</h1>

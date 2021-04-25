@@ -16,6 +16,7 @@ const Page: React.FC = () => {
   const { name } = useParams<{ name: string; }>();
 
   return (
+    
     <IonPage>
       <IonHeader translucent>
         <IonToolbar>
@@ -25,7 +26,7 @@ const Page: React.FC = () => {
           <IonTitle>{name}</IonTitle>
         </IonToolbar>
       </IonHeader>
-
+      
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
@@ -57,6 +58,7 @@ const Page: React.FC = () => {
         </IonRouterOutlet>
       </IonContent>
     </IonPage>
+   
   );
 };
 

@@ -28,7 +28,7 @@ const Picker = ({ onChildClick }) => {
         onClick={handleClick}
         style={{ margin: "1rem" }}
       >
-        Pick Base Color
+        Click to select Base Color
       </IonButton>
       {selectedColor ? (
         <div>

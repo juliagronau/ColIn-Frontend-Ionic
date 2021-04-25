@@ -7,18 +7,22 @@ import {
   IonListHeader,
   IonSelect,
   IonSelectOption,
-  IonPage,
-  IonItemDivider,
   IonButton,
 } from "@ionic/react";
 import { useState } from "react";
 import ColorComboResult from "./ColorComboResult";
+import Picker from "./Picker";
 
 const ColorCombo = () => {
-  const [baseColor, setbaseColor] = useState();
+  const [baseColor, setBaseColor] = useState();
   const [numberOfColors, setNumberOfColors] = useState();
   const [mode, setMode] = useState();
   const [submit, setSubmit] = useState(false);
+
+  const handleCallback = childData => {
+    const cleanBaseColor = childData.substring(1);
+    setBaseColor(cleanBaseColor);
+  };
 
   const onSubmit = e => {
     e.preventDefault();
@@ -55,28 +59,7 @@ const ColorCombo = () => {
               <IonLabel>Tell me about your preferences</IonLabel>
             </IonListHeader>
 
-            <IonItem>
-              <IonLabel>Base Color</IonLabel>
-              <IonSelect
-                value={baseColor}
-                onIonChange={e => setbaseColor(e.detail.value)}
-              >
-                <IonSelectOption value="808080">Gray</IonSelectOption>
-                <IonSelectOption value="000000">Black</IonSelectOption>
-                <IonSelectOption value="FF0000">Red</IonSelectOption>
-                <IonSelectOption value="800000">Maroon</IonSelectOption>
-                <IonSelectOption value="FFFF00">Yellow</IonSelectOption>
-                <IonSelectOption value="808000">Olive</IonSelectOption>
-                <IonSelectOption value="00FF00">Lime</IonSelectOption>
-                <IonSelectOption value="008000">Green</IonSelectOption>
-                <IonSelectOption value="00FFFF">Aqua</IonSelectOption>
-                <IonSelectOption value="008080">Teal</IonSelectOption>
-                <IonSelectOption value="0000FF">Blue</IonSelectOption>
-                <IonSelectOption value="000080">Navy</IonSelectOption>
-                <IonSelectOption value="FF00FF">Fuchsia</IonSelectOption>
-                <IonSelectOption value="800080">Purple</IonSelectOption>
-              </IonSelect>
-            </IonItem>
+            <Picker onChildClick={handleCallback} />
 
             <IonItem>
               <IonLabel>Number of Colors</IonLabel>
@@ -89,7 +72,6 @@ const ColorCombo = () => {
                 <IonSelectOption value="3">3</IonSelectOption>
                 <IonSelectOption value="4">4</IonSelectOption>
                 <IonSelectOption value="5">5</IonSelectOption>
-                <IonSelectOption value="6">6</IonSelectOption>
               </IonSelect>
             </IonItem>
             <IonItem>

@@ -11,7 +11,7 @@ const Home = () => {
             media="(prefers-color-scheme: dark)"
           ></source>
           <source
-            srcset="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_mitLogoUnten.jpg"
+            srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_mitLogoUnten.jpg"
             media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
           ></source>
           <img

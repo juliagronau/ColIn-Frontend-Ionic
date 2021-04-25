@@ -26,3 +26,9 @@
 .color-combo-result {
   height: 4rem;
 }
+
+.swatches-picker {
+  height: auto !important;
+  width: auto !important;
+  margin: 1rem !important;
+}

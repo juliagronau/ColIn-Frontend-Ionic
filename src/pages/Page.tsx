@@ -8,6 +8,8 @@ import Theme from '../components/Theme/Theme';
 import ColorCombo from '../components/ColorCombo/ColorCombo';
 import RandomColorCombo from '../components/ColorCombo/RandomColorCombo';
 import About from '../components/About';
+import Login from '../components/Login';
+import Signup from '../components/Signup';
 
 const Page: React.FC = () => {
 
@@ -42,6 +44,12 @@ const Page: React.FC = () => {
           </Route>
           <Route path="/page/Random" exact={true}>
             <RandomColorCombo />
+          </Route>
+          <Route path="/page/LogIn" exact={true}>
+            <Login />
+          </Route>
+          <Route path="/page/SignUp" exact={true}>
+            <Signup />
           </Route>
           <Route path="/page/About" exact={true}>
             <About />

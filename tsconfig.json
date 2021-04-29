@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    //if I added "watch": true it would automatically create a corresponding js file for every ts file upon compiling
     "target": "es5",
     "lib": [
       "dom",

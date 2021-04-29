@@ -1,6 +1,6 @@
 import { IonContent, IonIcon } from "@ionic/react";
 import "./ExploreContainer.css";
-import { colorPalette, brush } from "ionicons/icons";
+import { colorPalette, brush, heart } from "ionicons/icons";
 
 const About = () => {
   return (
@@ -8,11 +8,11 @@ const About = () => {
       <div className="container" style={{ padding: "2rem" }}>
         <picture>
           <source
-            srcset="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Julia_Dark.jpg"
+            srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Julia_Dark.jpg"
             media="(prefers-color-scheme: dark)"
           ></source>
           <source
-            srcset="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Julia.jpg"
+            srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Julia.jpg"
             media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
           ></source>
           <img
@@ -39,6 +39,11 @@ const About = () => {
         <br></br>
         <IonIcon icon={colorPalette} size="large"></IonIcon>
         <IonIcon icon={brush} size="large"></IonIcon>
+        <p>
+          Shoutout to my amazing friends Karo & Caro who helped me finding a
+          name for this project
+        </p>
+        <IonIcon icon={heart} size="small"></IonIcon>
         <p>
           Josh Beckman created an awesome API for colors, that I have used for
           parts of this project:{" "}

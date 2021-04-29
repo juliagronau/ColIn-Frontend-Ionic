@@ -38,10 +38,10 @@ const Home = () => {
             </picture>
           </IonCol>
           <IonCol>
-            <h2>
+            <p>
               I'm here to help you find the perfect color combination for your
               project.
-            </h2>
+            </p>
           </IonCol>
         </IonRow>
         <IonButton href="/page/ColorCombo">

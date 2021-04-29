@@ -12,6 +12,8 @@ import {
 
 import { useLocation } from 'react-router-dom';
 import './Menu.css';
+import { AuthContext } from "../context/AuthContext";
+import {useContext} from 'react';
 
 interface AppPage {
   title: string;
@@ -41,6 +43,10 @@ const appPages: AppPage[] = [
     url: '/page/SignUp'
   },
   {
+    title: 'Account',
+    url: '/page/Account'
+  },
+  {
     title: 'About',
     url: '/page/About'
   }
@@ -48,6 +54,9 @@ const appPages: AppPage[] = [
 
 const Menu: React.FC = () => {
   const location = useLocation();
+  const { isAuthenticated, setIsAuthenticated, error, setError } = useContext(
+    AuthContext
+  );
 
   return (
     <IonMenu contentId="main" type="overlay">

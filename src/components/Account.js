@@ -1,7 +1,12 @@
-import { IonContent, IonButton } from "@ionic/react";
-import React from "react";
+import { IonButton, IonContent, IonGrid, IonRow, IonCol } from "@ionic/react";
+import axios from "axios";
+import { useContext, useEffect } from "react";
+import { AuthContext } from "../context/AuthContext";
 
-const AfterSignup = () => {
+const Account = () => {
+  const { user, SetUser } = useContext(AuthContext);
+  console.log(user);
+
   return (
     <IonContent>
       <div className="container" style={{ paddingBottom: "2rem" }}>
@@ -19,18 +24,23 @@ const AfterSignup = () => {
             alt="Header Login"
           />
         </picture>
-        <h1>Your SignUp was successful! Have fun!</h1>
-        <IonButton href="/page/ColorCombo">
-          Get a personal Color Combo
-        </IonButton>
-        <IonButton href="/page/Themes">Choose from one of the themes</IonButton>
-        <IonButton href="/page/Random">Get a random Color Combo</IonButton>
-        <IonButton href="/page/SubmitTheme">
-          Submit your own theme for the community
-        </IonButton>
+        <h1>Hello {user.username}</h1>
+        <h2>Saved Combos</h2>
+        <IonGrid>
+          {user.savedcombo ? (
+            user.savedcombo.map(combo => {
+              <IonRow>
+                <IonCol>{combo.name}</IonCol>
+              </IonRow>;
+            })
+          ) : (
+            <p>No Combos saved yet</p>
+          )}
+        </IonGrid>
+        <IonButton>Change Password</IonButton>
       </div>
     </IonContent>
   );
 };
 
-export default AfterSignup;
+export default Account;

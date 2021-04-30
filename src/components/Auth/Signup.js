@@ -11,9 +11,14 @@ import { Redirect } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 
 const Signup = () => {
-  const { isAuthenticated, setIsAuthenticated, error, setError } = useContext(
-    AuthContext
-  );
+  const {
+    isAuthenticated,
+    setIsAuthenticated,
+    error,
+    setError,
+    user,
+    setUser,
+  } = useContext(AuthContext);
   const [formState, setFormState] = useState({
     email: "",
     username: "",
@@ -38,11 +43,10 @@ const Signup = () => {
     };
     try {
       const res = await fetch(
-        "https://colin-color-inspirator.herokuapp.com/user/signup",
+        `${process.env.REACT_APP_API}/user/signup`,
         options
       );
-      const { token, message } = await res.json();
-      //set this to session storage
+      const { token, message, result } = await res.json();
       if (message !== "User created successfully") {
         setError(message);
         console.log(message);
@@ -50,6 +54,7 @@ const Signup = () => {
       } else if (token) {
         localStorage.setItem("token", token);
         setIsAuthenticated(true);
+        setUser(result);
       }
     } catch (error) {
       console.log(error);
@@ -62,8 +67,7 @@ const Signup = () => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
 
-  // Do something meaningful here
-  if (isAuthenticated) return <Redirect to="/page/SignUpSuccess" />;
+  if (isAuthenticated) return <Redirect to="/page/Account" />;
   return (
     <IonContent>
       <div className="container" style={{ paddingBottom: "2rem" }}>

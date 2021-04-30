@@ -17,11 +17,11 @@ const Theme = () => {
       <div className="container" style={{ paddingBottom: "2rem" }}>
         <picture>
           <source
-            srcset="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_kleineKlecke_Dark.jpg"
+            srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_kleineKlecke_Dark.jpg"
             media="(prefers-color-scheme: dark)"
           ></source>
           <source
-            srcset="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_kleineKleckse.jpg"
+            srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_kleineKleckse.jpg"
             media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
           ></source>
           <img

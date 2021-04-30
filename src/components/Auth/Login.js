@@ -12,9 +12,14 @@ import { Redirect } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 
 const Login = () => {
-  const { isAuthenticated, setIsAuthenticated, error, setError } = useContext(
-    AuthContext
-  );
+  const {
+    isAuthenticated,
+    setIsAuthenticated,
+    error,
+    setError,
+    user,
+    setUser,
+  } = useContext(AuthContext);
   const [formState, setFormState] = useState({
     email: "",
     password: "",
@@ -36,11 +41,10 @@ const Login = () => {
     };
     try {
       const res = await fetch(
-        "https://colin-color-inspirator.herokuapp.com/user/login",
+        `${process.env.REACT_APP_API}/user/login`,
         options
       );
-      const { token, message } = await res.json();
-      //set this to session storage
+      const { token, message, result } = await res.json();
       if (message) {
         setError(message);
         console.log(message);
@@ -48,6 +52,7 @@ const Login = () => {
       } else if (token) {
         localStorage.setItem("token", token);
         setIsAuthenticated(true);
+        setUser(result);
       }
     } catch (error) {
       console.log(error);
@@ -58,7 +63,7 @@ const Login = () => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
 
-  if (isAuthenticated) return <Redirect to="/" />;
+  if (isAuthenticated) return <Redirect to="/page/Account" />;
 
   return (
     <IonContent>

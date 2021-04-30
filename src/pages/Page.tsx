@@ -10,7 +10,8 @@ import RandomColorCombo from '../components/ColorCombo/RandomColorCombo';
 import About from '../components/About';
 import Login from '../components/Auth/Login';
 import Signup from '../components/Auth/Signup';
-import AfterSignup from '../components/Auth/AfterSignup';
+import Logout from '../components/Auth/Logout';
+import Account from '../components/Account';
 
 const Page: React.FC = () => {
 
@@ -53,8 +54,11 @@ const Page: React.FC = () => {
           <Route path="/page/SignUp" exact={true}>
             <Signup />
           </Route>
-          <Route path="/page/SignUpSuccess" exact={true}>
-            <AfterSignup />
+          <Route path="/page/LogOut" exact={true}>
+            <Logout />
+          </Route>
+          <Route path="/page/Account" exact={true}>
+            <Account />
           </Route>
           <Route path="/page/About" exact={true}>
             <About />

@@ -7,21 +7,21 @@ const Home = () => {
       <div className="container" style={{ padding: "2rem" }}>
         <picture>
           <source
-            srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_mitLogoUnten_Dark.jpg"
+            srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_mitLogo_Dark_neu.jpg"
             media="(prefers-color-scheme: dark)"
           ></source>
           <source
-            srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_mitLogoUnten.jpg"
+            srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_mitLogo_neu.jpg"
             media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
           ></source>
           <img
-            src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_mitLogoUnten.jpg"
+            src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_mitLogo_neu.jpg"
             alt="ColIn Header"
           />
         </picture>
-        <h1>ColIn - the color inspirator for your creative projects</h1>
+        <h1>colin - the color inspirator for your creative projects</h1>
         <IonRow>
-          <IonCol>
+          <IonCol className="column-center">
             <picture>
               <source
                 srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Welcome_Dark.jpg"
@@ -37,13 +37,18 @@ const Home = () => {
               />
             </picture>
           </IonCol>
-          <IonCol>
-            <p>
+          <IonCol className="column-center">
+            <h3>
               I'm here to help you find the perfect color combination for your
               project.
-            </p>
+            </h3>
           </IonCol>
         </IonRow>
+
+        <p style={{ padding: "1rem" }}>
+          Login or create an account to save color combinations for later
+        </p>
+
         <IonButton href="/page/ColorCombo">
           Get a personal Color Combo
         </IonButton>

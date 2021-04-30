@@ -1,7 +1,7 @@
 import {
   IonContent,
-  IonImg,
   IonItem,
+  IonItemDivider,
   IonLabel,
   IonList,
   IonListHeader,
@@ -18,7 +18,16 @@ import {useContext} from 'react';
 interface AppPage {
   title: string;
   url: string;
-  
+}
+
+interface ProtectedPage {
+  title: string;
+  url: string;
+}
+
+interface AuthPage {
+  title: string;
+  url: string;
 }
 
 const appPages: AppPage[] = [
@@ -35,20 +44,30 @@ const appPages: AppPage[] = [
     url: '/page/Themes'
   },
   {
+    title: 'About',
+    url: '/page/About'
+  }
+];
+
+const protectedPages: ProtectedPage[] = [ 
+  {
+    title: 'Account',
+    url: '/page/Account'
+  },
+  {
+    title: "LogOut",
+    url: "/page/LogOut"
+  }
+];
+
+const authPages: AuthPage[] = [
+  {
     title: 'LogIn',
     url: '/page/LogIn'
   },
   {
     title: 'SignUp',
     url: '/page/SignUp'
-  },
-  {
-    title: 'Account',
-    url: '/page/Account'
-  },
-  {
-    title: 'About',
-    url: '/page/About'
   }
 ];
 
@@ -78,6 +97,23 @@ const Menu: React.FC = () => {
                 </IonItem>
               </IonMenuToggle>
             );
+          })}
+          <IonItemDivider></IonItemDivider>
+          {!isAuthenticated && authPages.map((authPage, index) => {
+            return (
+            <IonMenuToggle key={index} autoHide={false}>
+                <IonItem className={location.pathname === authPage.url ? 'selected' : ''} routerLink={authPage.url} routerDirection="none" lines="none" detail={false}>
+                  <IonLabel>{authPage.title}</IonLabel>
+                </IonItem>
+            </IonMenuToggle>);
+          })}
+          {isAuthenticated && protectedPages.map((protectedPage, index) => {
+            return (
+            <IonMenuToggle key={index} autoHide={false}>
+                <IonItem className={location.pathname === protectedPage.url ? 'selected' : ''} routerLink={protectedPage.url} routerDirection="none" lines="none" detail={false}>
+                  <IonLabel>{protectedPage.title}</IonLabel>
+                </IonItem>
+            </IonMenuToggle>);
           })}
         </IonList>
       </IonContent>

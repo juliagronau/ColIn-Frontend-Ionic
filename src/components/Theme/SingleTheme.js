@@ -6,7 +6,7 @@ import "../ExploreContainer.css";
 const SingleTheme = props => {
   const [theme, setTheme] = useState();
   const [themeColors, setThemeColors] = useState();
-  const url = `https://colin-color-inspirator.herokuapp.com/themes/${props.themeID}`;
+  const url = `${process.env.REACT_APP_API}/themes/${props.themeID}`;
 
   useEffect(() => {
     axios
@@ -31,15 +31,17 @@ const SingleTheme = props => {
                   backgroundColor: `${color.hex}`,
                 }}
               ></div>
-              <p>{color.name} </p>
-              <p>{color.hex}</p>
+              <p style={{ fontSize: "0.8rem" }}>{color.name} </p>
+              <p style={{ fontSize: "0.8rem" }}>{color.hex}</p>
             </IonCol>
           ))}
         </IonRow>
         <IonRow style={{ marginTop: "2rem" }}>
-          Please note: There are many unnamed colors. The names displayed here
-          correspond to the closest color that has a name if the displayed color
-          doesn't have one.
+          <p>
+            Please note: There are many unnamed colors. The names displayed here
+            correspond to the closest color that has a name if the displayed
+            color doesn't have one.
+          </p>
         </IonRow>
       </IonGrid>
     </>

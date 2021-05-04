@@ -36,9 +36,11 @@ const RandomColorComboResult = props => {
         )}
       </IonRow>
       <IonRow style={{ marginTop: "2rem" }}>
-        Please note: There are many unnamed colors. The names displayed here
-        correspond to the closest color that has a name if the displayed color
-        doesn't have one.
+        <p>
+          Please note: There are many unnamed colors. The names displayed here
+          correspond to the closest color that has a name if the displayed color
+          doesn't have one.
+        </p>
       </IonRow>
     </IonGrid>
   );

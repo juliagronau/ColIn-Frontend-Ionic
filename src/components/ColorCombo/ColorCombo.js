@@ -44,11 +44,11 @@ const ColorCombo = () => {
             media="(prefers-color-scheme: dark)"
           ></source>
           <source
-            srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Pinsel.jpg"
+            srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_kleineKleckse_schmal.jpg"
             media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
           ></source>
           <img
-            src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Pinsel.jpg"
+            src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_kleineKleckse_schmal.jpg.jpg"
             alt="placeholder"
           />
         </picture>

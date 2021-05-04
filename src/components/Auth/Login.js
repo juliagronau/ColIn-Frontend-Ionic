@@ -63,7 +63,7 @@ const Login = () => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
 
-  if (isAuthenticated) return <Redirect to="/page/Account" />;
+  if (isAuthenticated && user) return <Redirect to="/page/Account" />;
 
   return (
     <IonContent>

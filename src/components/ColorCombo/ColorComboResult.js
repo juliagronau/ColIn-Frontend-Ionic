@@ -14,7 +14,8 @@ import "../ExploreContainer.css";
 const ColorComboResult = props => {
   const [combo, setCombo] = useState();
   const url = `https://www.thecolorapi.com/scheme?hex=${props.baseColor}&mode=${props.mode}&count=${props.numberOfColors}`;
-  const { isAuthenticated, setIsAuthenticated } = useContext(AuthContext);
+  const { isAuthenticated, setIsAuthenticated, user } = useContext(AuthContext);
+  const saveUrl = `${process.env.REACT_APP_API}/user/${user._id}/savecombo`;
 
   useEffect(() => {
     axios
@@ -25,7 +26,16 @@ const ColorComboResult = props => {
       .catch(err => console.log(err));
   }, [url]);
 
-  const onClick = () => {};
+  const onClick = () => {
+    console.log(combo);
+    const savedcombos = combo.map(color => ({
+      name: `${color.name.value}`,
+      hex: `${color.hex.value}`,
+    }));
+    console.log(savedcombos);
+    axios.post(saveUrl, { savedcombos }).then(res => console.log(res));
+    alert("Combo saved! You can find your saved Combos in the Account section");
+  };
 
   return (
     <IonGrid>
@@ -54,9 +64,11 @@ const ColorComboResult = props => {
         )}
       </IonRow>
       <IonRow style={{ marginTop: "2rem" }}>
-        Please note: There are many unnamed colors. The names displayed here
-        correspond to the closest color that has a name if the displayed color
-        doesn't have one.
+        <p>
+          Please note: There are many unnamed colors. The names displayed here
+          correspond to the closest color that has a name if the displayed color
+          doesn't have one.
+        </p>
       </IonRow>
     </IonGrid>
   );

@@ -6,7 +6,16 @@ import { IonContent, IonSpinner } from "@ionic/react";
 const RandomColorCombo = () => {
   const [randomBaseColor, setRandomBaseColor] = useState();
   const [randomMode, setRandomMode] = useState();
-  const baseColor = ["808080", "800000", "FFFF00", "00FF00"];
+  const baseColor = [
+    "808080",
+    "800000",
+    "FFFF00",
+    "00FF00",
+    "555555",
+    "790E33",
+    "A81345",
+    "D71758",
+  ];
   const mode = [
     "monochrome",
     "monochrome-dark",

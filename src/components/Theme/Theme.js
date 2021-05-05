@@ -14,7 +14,7 @@ const Theme = () => {
 
   return (
     <IonContent>
-      <div className="container" style={{ paddingBottom: "2rem" }}>
+      <div className="smallheader" style={{ paddingBottom: "2rem" }}>
         <picture>
           <source
             srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_kleineKlecke_Dark.jpg"

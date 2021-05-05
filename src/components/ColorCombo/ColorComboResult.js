@@ -39,7 +39,7 @@ const ColorComboResult = props => {
 
   return (
     <IonGrid>
-      <IonRow>
+      <IonRow className="combo">
         {combo ? (
           combo.map(color => (
             <IonCol key={color.hex.clean}>

@@ -40,7 +40,7 @@ const ColorCombo = () => {
       <div className="smallheader">
         <picture>
           <source
-            srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Pinsel_Dark.jpg"
+            srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_kleineKlecke_schmal_Dark.jpg"
             media="(prefers-color-scheme: dark)"
           ></source>
           <source

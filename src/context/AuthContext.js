@@ -9,7 +9,6 @@ const AuthState = ({ children }) => {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    // This should also return the user info in order to store it in the user context
     const verifySession = async () => {
       const options = {
         credentials: "include",
@@ -18,7 +17,7 @@ const AuthState = ({ children }) => {
         },
       };
       const res = await fetch(
-        "http://localhost:5000/user/verify-session",
+        `${process.env.REACT_APP_API}/user/verify-session`,
         options
       );
       const { success, error, user } = await res.json();

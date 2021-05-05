@@ -1,20 +1,22 @@
 {
-  "short_name": "Ionic App",
-  "name": "My Ionic App",
+  "short_name": "ColIn",
+  "name": "ColIn Color Inspirator",
   "icons": [
     {
       "src": "assets/icon/favicon.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "assets/icon/icon.png",
+      "src": "https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Logo3_bunt.png",
+      "sizes": "2048x2048",
       "type": "image/png",
-      "sizes": "512x512",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     }
+
   ],
-  "start_url": ".",
+  "start_url": "index.html",
   "display": "standalone",
   "theme_color": "#ffffff",
   "background_color": "#ffffff"

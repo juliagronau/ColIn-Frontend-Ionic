@@ -84,7 +84,7 @@ const Login = () => {
         </picture>
 
         <>
-          <h1>Please log in to save color combinations or submit new themes</h1>
+          <h1>Please log in to save color combinations</h1>
           <form onSubmit={onSubmit}>
             <IonList>
               <IonItem>

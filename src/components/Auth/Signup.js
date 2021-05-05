@@ -85,10 +85,7 @@ const Signup = () => {
             alt="Header Login"
           />
         </picture>
-        <h1>
-          Create an account to save color combinations for later or submit new
-          color themes
-        </h1>
+        <h1>Create an account to save color combinations for later</h1>
         <form onSubmit={onSubmit}>
           <IonList>
             <IonItem>

@@ -26,6 +26,7 @@ const Signup = () => {
     repeatPassword: "",
   });
   const { email, username, password, repeatPassword } = formState;
+  const [showHeader, setShowHeader] = useState(true);
 
   const onSubmit = async e => {
     e.preventDefault();
@@ -65,26 +66,29 @@ const Signup = () => {
 
   const onChange = e => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
+    setShowHeader(false);
   };
 
   if (isAuthenticated) return <Redirect to="/page/Account" />;
   return (
     <IonContent>
       <div className="container" style={{ paddingBottom: "2rem" }}>
-        <picture>
-          <source
-            srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Login_Dark.jpg"
-            media="(prefers-color-scheme: dark)"
-          ></source>
-          <source
-            srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Login.jpg"
-            media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
-          ></source>
-          <img
-            src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Login.jpg"
-            alt="Header Login"
-          />
-        </picture>
+        {showHeader ? (
+          <picture>
+            <source
+              srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Login_Dark.jpg"
+              media="(prefers-color-scheme: dark)"
+            ></source>
+            <source
+              srcSet="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Login.jpg"
+              media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+            ></source>
+            <img
+              src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Login.jpg"
+              alt="Header Login"
+            />
+          </picture>
+        ) : null}
         <h1>Create an account to save color combinations for later</h1>
         <form onSubmit={onSubmit}>
           <IonList>

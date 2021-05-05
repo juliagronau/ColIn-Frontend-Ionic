@@ -13,6 +13,12 @@
       "sizes": "2048x2048",
       "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Logo3_bunt_192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
 
   ],

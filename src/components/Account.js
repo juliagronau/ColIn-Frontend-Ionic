@@ -42,7 +42,7 @@ const Account = () => {
           ></source>
           <img
             src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_Login.jpg"
-            alt="Header Login"
+            alt="Header Login Hi"
           />
         </picture>
         <h1>Hello {user.username}!</h1>

@@ -49,7 +49,7 @@ const ColorCombo = () => {
           ></source>
           <img
             src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_kleineKleckse_schmal.jpg.jpg"
-            alt="placeholder"
+            alt="Header blurs of color"
           />
         </picture>
         <h1>Get your personalized Color Combination</h1>

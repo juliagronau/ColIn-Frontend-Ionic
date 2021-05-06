@@ -26,7 +26,7 @@ const Theme = () => {
           ></source>
           <img
             src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_kleineKleckse.jpg"
-            alt="placeholder"
+            alt="Header blurs of color"
           />
         </picture>
         <h1>Choose from one of my themes</h1>

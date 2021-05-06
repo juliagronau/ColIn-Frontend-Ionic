@@ -16,7 +16,7 @@ const Home = () => {
           ></source>
           <img
             src="https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn_Header_mitLogo_neu.jpg"
-            alt="ColIn Header"
+            alt="ColIn Header with Logo"
           />
         </picture>
         <h1>colin - the color inspirator for your creative projects</h1>

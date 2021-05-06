@@ -25,5 +25,23 @@
   "start_url": "page/Home",
   "display": "standalone",
   "theme_color": "#ffffff",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "screenshots": [
+    {
+      "src": "https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn+-+Your+Color+Inspirator-Homepage.png",
+      "sizes": "1080x1920",
+      "type": "image/png"
+    },
+    {
+      "src": "https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn+-+Your+Color+Inspirator-ColorCombopng.png",
+      "sizes": "1080x1920",
+      "type": "image/png"
+    },
+    {
+      "src": "https://colin-colorinspirator-assets.s3.eu-central-1.amazonaws.com/ColIn+-+Your+Color+Inspirator-Themes.png",
+      "sizes": "1080x1920",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["creativity", "colors", "painting", "handlettering"]
 }

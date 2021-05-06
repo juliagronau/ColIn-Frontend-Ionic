@@ -1,5 +1,5 @@
 [{
       "relation": ["delegate_permission/common.handle_all_urls"],
       "target" : { "namespace": "android_app", "package_name": "app.netlify.colin_color_inspirator.twa",
-                   "sha256_cert_fingerprints": ["F5:95:DC:AA:9F:0A:60:3E:BF:4F:28:1C:B4:14:C2:7B:B0:D4:91:40:2C:53:91:99:B6:2D:C7:44:59:04:BD:35"] }
+                   "sha256_cert_fingerprints": ["C7:1E:00:B6:A6:D3:D3:45:F0:44:24:23:4B:46:52:E7:05:31:AF:4D:B5:81:DB:17:F8:7D:8A:A2:A3:0D:41:6C"] }
     }]
